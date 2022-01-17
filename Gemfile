@@ -31,6 +31,8 @@ gem 'bootstrap', '~> 5.1', '>= 5.1.3'
 
 gem 'jquery-rails'
 
+gem 'json', '~> 2.6', '>= 2.6.1'
+
 # Use Redis adapter to run Action Cable in production
 # gem "redis", "~> 4.0"
 
