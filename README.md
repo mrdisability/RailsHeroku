@@ -1,3 +1,3 @@
 # RailsHeroku
 
-## Deploying to Heroku
+## Deployed to Heroku: https://railsherokupractice.herokuapp.com/
