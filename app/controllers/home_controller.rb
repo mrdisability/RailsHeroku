@@ -17,6 +17,8 @@ class HomeController < ApplicationController
       @final_output = "Error"
 
       @api_colour = "gray"
+
+      @description = 'Error'
     else 
       @final_output = @output[0]['AQI']
 
@@ -24,16 +26,22 @@ class HomeController < ApplicationController
       #   @api_colour = 'gray'
       if @final_output <= 50
         @api_colour = 'green'
+        @description = 'Good'
       elsif @final_output >= 51 && @final_output <= 100
         @api_colour = 'yellow'
+        @description = 'Moderate'
       elsif @final_output >= 101 && @final_output <= 150
         @api_colour = 'orange'
+        @description = '(USG) Unhealthy for Sensitive Groups'
       elsif @final_output >= 151 && @final_output <= 200
         @api_colour = 'red'
+        @description = 'Unhealthy'
       elsif @final_output >= 201 && @final_output <= 300
         @api_colour = 'purple'
+        @description = 'Very Unhealthy'
       elsif @final_output >= 301 && @final_output <= 500
         @api_colour = 'maroon'
+        @description = 'Hazardous'
       end
     end
 
